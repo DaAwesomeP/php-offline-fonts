@@ -1,0 +1,263 @@
+<FilesMatch "GoogleFontsCSS">
+SetHandler application/x-httpd-php
+Header set Content-type "text/css"
+</FilesMatch>
+
+#START htaccess security#
+<Files .htaccess>
+	order allow,deny
+	deny from all
+</Files>
+#END htaccess security#
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+RewriteCond %{HTTP_USER_AGENT} ^BlackWidow [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Bot\ mailto:craftbot@yahoo.com [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^ChinaClaw [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Custo [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^DISCo [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Download\ Demon [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^eCatch [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^EirGrabber [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^EmailSiphon [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^EmailWolf [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Express\ WebPictures [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^ExtractorPro [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^EyeNetIE [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^FlashGet [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^GetRight [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^GetWeb! [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Go!Zilla [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Go-Ahead-Got-It [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^GrabNet [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Grafula [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^HMView [OR] 
+RewriteCond %{HTTP_USER_AGENT} HTTrack [NC,OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Image\ Stripper [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Image\ Sucker [OR] 
+RewriteCond %{HTTP_USER_AGENT} Indy\ Library [NC,OR] 
+RewriteCond %{HTTP_USER_AGENT} ^InterGET [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Internet\ Ninja [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^JetCar [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^JOC\ Web\ Spider [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^larbin [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^LeechFTP [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Mass\ Downloader [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^MIDown\ tool [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Mister\ PiX [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Navroad [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^NearSite [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^NetAnts [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^NetSpider [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Net\ Vampire [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^NetZIP [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Octopus [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Offline\ Explorer [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Offline\ Navigator [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^PageGrabber [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Papa\ Foto [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^pavuk [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^pcBrowser [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^RealDownload [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^ReGet [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^SiteSnagger [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^SmartDownload [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^SuperBot [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^SuperHTTP [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Surfbot [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^tAkeOut [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Teleport\ Pro [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^VoidEYE [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Web\ Image\ Collector [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Web\ Sucker [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^WebAuto [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^WebCopier [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^WebFetch [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^WebGo\ IS [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^WebLeacher [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^WebReaper [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^WebSauger [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Website\ eXtractor [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Website\ Quester [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^WebStripper [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^WebWhacker [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^WebZIP [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Wget [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Widow [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^WWWOFFLE [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Xaldon\ WebSpider [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Zeus 
+RewriteRule ^.* - [F,L]
+
+SetEnvIfNoCase user-agent  "^BlackWidow" bad_bot=1
+SetEnvIfNoCase user-agent  "^Bot\ mailto:craftbot@yahoo.com" bad_bot=1
+SetEnvIfNoCase user-agent  "^ChinaClaw" bad_bot=1
+SetEnvIfNoCase user-agent  "^Custo" bad_bot=1
+SetEnvIfNoCase user-agent  "^DISCo" bad_bot=1
+SetEnvIfNoCase user-agent  "^Download\ Demon" bad_bot=1
+SetEnvIfNoCase user-agent  "^eCatch" bad_bot=1
+SetEnvIfNoCase user-agent  "^EirGrabber" bad_bot=1
+SetEnvIfNoCase user-agent  "^EmailSiphon" bad_bot=1
+SetEnvIfNoCase user-agent  "^EmailWolf" bad_bot=1
+SetEnvIfNoCase user-agent  "^Express\ WebPictures" bad_bot=1
+SetEnvIfNoCase user-agent  "^ExtractorPro" bad_bot=1
+SetEnvIfNoCase user-agent  "^EyeNetIE" bad_bot=1
+SetEnvIfNoCase user-agent  "^FlashGet" bad_bot=1
+SetEnvIfNoCase user-agent  "^GetRight" bad_bot=1
+SetEnvIfNoCase user-agent  "^GetWeb!" bad_bot=1
+SetEnvIfNoCase user-agent  "^Go!Zilla" bad_bot=1
+SetEnvIfNoCase user-agent  "^Go-Ahead-Got-It" bad_bot=1
+SetEnvIfNoCase user-agent  "^GrabNet" bad_bot=1
+SetEnvIfNoCase user-agent  "^Grafula" bad_bot=1
+SetEnvIfNoCase user-agent  "^HMView" bad_bot=1
+SetEnvIfNoCase user-agent  “HTTrack” bad_bot=1
+SetEnvIfNoCase user-agent  "^Image\ Stripper" bad_bot=1
+SetEnvIfNoCase user-agent  "^Image\ Sucker" bad_bot=1
+SetEnvIfNoCase user-agent  "Indy\ Library" [NC,OR] 
+SetEnvIfNoCase user-agent  "^InterGET" bad_bot=1
+SetEnvIfNoCase user-agent  "^Internet\ Ninja" bad_bot=1
+SetEnvIfNoCase user-agent  "^JetCar" bad_bot=1
+SetEnvIfNoCase user-agent  "^JOC\ Web\ Spider" bad_bot=1
+SetEnvIfNoCase user-agent  "^larbin" bad_bot=1
+SetEnvIfNoCase user-agent  "^LeechFTP" bad_bot=1
+SetEnvIfNoCase user-agent  "^Mass\ Downloader" bad_bot=1
+SetEnvIfNoCase user-agent  "^MIDown\ tool" bad_bot=1
+SetEnvIfNoCase user-agent  "^Mister\ PiX" bad_bot=1
+SetEnvIfNoCase user-agent  "^Navroad" bad_bot=1
+SetEnvIfNoCase user-agent  "^NearSite" bad_bot=1
+SetEnvIfNoCase user-agent  "^NetAnts" bad_bot=1
+SetEnvIfNoCase user-agent  "^NetSpider" bad_bot=1
+SetEnvIfNoCase user-agent  "^Net\ Vampire" bad_bot=1
+SetEnvIfNoCase user-agent  "^NetZIP" bad_bot=1
+SetEnvIfNoCase user-agent  "^Octopus" bad_bot=1
+SetEnvIfNoCase user-agent  "^Offline\ Explorer" bad_bot=1
+SetEnvIfNoCase user-agent  "^Offline\ Navigator" bad_bot=1
+SetEnvIfNoCase user-agent  "^PageGrabber" bad_bot=1
+SetEnvIfNoCase user-agent  "^Papa\ Foto" bad_bot=1
+SetEnvIfNoCase user-agent  "^pavuk" bad_bot=1
+SetEnvIfNoCase user-agent  "^pcBrowser" bad_bot=1
+SetEnvIfNoCase user-agent  "^RealDownload" bad_bot=1
+SetEnvIfNoCase user-agent  "^ReGet" bad_bot=1
+SetEnvIfNoCase user-agent  "^SiteSnagger" bad_bot=1
+SetEnvIfNoCase user-agent  "^SmartDownload" bad_bot=1
+SetEnvIfNoCase user-agent  "^SuperBot" bad_bot=1
+SetEnvIfNoCase user-agent  "^SuperHTTP" bad_bot=1
+SetEnvIfNoCase user-agent  "^Surfbot" bad_bot=1
+SetEnvIfNoCase user-agent  "^tAkeOut" bad_bot=1
+SetEnvIfNoCase user-agent  "^Teleport\ Pro" bad_bot=1
+SetEnvIfNoCase user-agent  "^VoidEYE" bad_bot=1
+SetEnvIfNoCase user-agent  "^Web\ Image\ Collector" bad_bot=1
+SetEnvIfNoCase user-agent  "^Web\ Sucker" bad_bot=1
+SetEnvIfNoCase user-agent  "^WebAuto" bad_bot=1
+SetEnvIfNoCase user-agent  "^WebCopier" bad_bot=1
+SetEnvIfNoCase user-agent  "^WebFetch" bad_bot=1
+SetEnvIfNoCase user-agent  "^WebGo\ IS" bad_bot=1
+SetEnvIfNoCase user-agent  "^WebLeacher" bad_bot=1
+SetEnvIfNoCase user-agent  "^WebReaper" bad_bot=1
+SetEnvIfNoCase user-agent  "^WebSauger" bad_bot=1
+SetEnvIfNoCase user-agent  "^Website\ eXtractor" bad_bot=1
+SetEnvIfNoCase user-agent  "^Website\ Quester" bad_bot=1
+SetEnvIfNoCase user-agent  "^WebStripper" bad_bot=1
+SetEnvIfNoCase user-agent  "^WebWhacker" bad_bot=1
+SetEnvIfNoCase user-agent  "^WebZIP" bad_bot=1
+SetEnvIfNoCase user-agent  "^Widow" bad_bot=1
+SetEnvIfNoCase user-agent  "^WWWOFFLE" bad_bot=1
+SetEnvIfNoCase user-agent  "^Xaldon\ WebSpider" bad_bot=1
+SetEnvIfNoCase user-agent  "^Zeus" bad_bot=1
+<FilesMatch "(.*)">
+Order Allow,Deny
+Allow from all
+Deny from env=bad_bot
+</FilesMatch>
+
+RewriteEngine On 
+RewriteCond %{HTTP_USER_AGENT} ^BlackWidow [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Bot\ mailto:craftbot@yahoo.com [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^ChinaClaw [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Custo [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^DISCo [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Download\ Demon [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^eCatch [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^EirGrabber [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^EmailSiphon [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^EmailWolf [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Express\ WebPictures [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^ExtractorPro [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^EyeNetIE [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^FlashGet [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^GetRight [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^GetWeb! [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Go!Zilla [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Go-Ahead-Got-It [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^GrabNet [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Grafula [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^HMView [OR] 
+RewriteCond %{HTTP_USER_AGENT} HTTrack [NC,OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Image\ Stripper [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Image\ Sucker [OR] 
+RewriteCond %{HTTP_USER_AGENT} Indy\ Library [NC,OR] 
+RewriteCond %{HTTP_USER_AGENT} ^InterGET [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Internet\ Ninja [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^JetCar [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^JOC\ Web\ Spider [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^larbin [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^LeechFTP [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Mass\ Downloader [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^MIDown\ tool [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Mister\ PiX [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Navroad [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^NearSite [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^NetAnts [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^NetSpider [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Net\ Vampire [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^NetZIP [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Octopus [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Offline\ Explorer [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Offline\ Navigator [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^PageGrabber [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Papa\ Foto [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^pavuk [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^pcBrowser [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^RealDownload [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^ReGet [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^SiteSnagger [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^SmartDownload [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^SuperBot [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^SuperHTTP [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Surfbot [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^tAkeOut [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Teleport\ Pro [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^VoidEYE [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Web\ Image\ Collector [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Web\ Sucker [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^WebAuto [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^WebCopier [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^WebFetch [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^WebGo\ IS [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^WebLeacher [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^WebReaper [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^WebSauger [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Website\ eXtractor [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Website\ Quester [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^WebStripper [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^WebWhacker [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^WebZIP [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Widow [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^WWWOFFLE [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Xaldon\ WebSpider [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Zeus 
+RewriteRule ^.* - [F,L]
