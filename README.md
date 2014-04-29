@@ -1,4 +1,4 @@
-PHP Offline  Fonts ![Apache 2.0 License](https://img.shields.io/badge/license-Apache%202.0-red.svg)[![Gitter chat](https://badges.gitter.im/DaAwesomeP/php-offline-fonts.png)](https://gitter.im/DaAwesomeP/php-offline-fonts)
+PHP Offline  Fonts ![Apache 2.0 License](https://img.shields.io/badge/license-Apache%202.0-red.svg?style=flat)![Release](http://img.shields.io/github/release/DaAwesomeP/php-offline-fonts.svg?style=flat)[![Gitter chat](https://badges.gitter.im/DaAwesomeP/php-offline-fonts.png?style=flat)](https://gitter.im/DaAwesomeP/php-offline-fonts)
 ==================
 
 ### **This is under development and will soon be a composer package**
