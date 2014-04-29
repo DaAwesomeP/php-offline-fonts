@@ -1,4 +1,4 @@
-PHP Offline  Fonts
+PHP Offline  Fonts [![Gitter chat](https://badges.gitter.im/DaAwesomeP/php-offline-fonts.png)](https://gitter.im/DaAwesomeP/php-offline-fonts)
 ==================
 
 ### **This is under development and will soon be a composer package**
