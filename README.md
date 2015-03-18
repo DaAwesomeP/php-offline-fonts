@@ -37,3 +37,7 @@ TODO
  - Composer Package
  - Auto delete/expring fonts (your cache will be huge otherwise)
  - Nginx Example
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/DaAwesomeP/php-offline-fonts/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
