@@ -8,6 +8,7 @@ $google_url = "https://themes.googleusercontent.com/static/fonts/";
 
 
 // DO NOT TOUCH PAST THIS POINT
+header('Content-type:text/css');
 $font_error = null;
 if (!(isset($_SERVER['HTTP_USER_AGENT'])) || $_SERVER['HTTP_USER_AGENT'] == "") {
 		$msg = "/* Could not load fonts! Please use the user agent HTTP header. */";
