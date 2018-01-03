@@ -4,7 +4,7 @@ PHP Offline  Fonts
 [![Apache 2.0 License](https://img.shields.io/badge/license-Apache%202.0-red.svg?style=flat)](https://github.com/DaAwesomeP/php-offline-fonts/blob/master/LICENSE)
 [![Gitter chat](http://img.shields.io/badge/gitter-open-1DCE73.svg?style=flat)](https://gitter.im/DaAwesomeP/php-offline-fonts)
 
-### **This is under development and will soon be a composer package**
+### **DEPRECATED: This project was an experiment and is no longer under development.**
 
 **Why can't I download the fonts from Google myself?**
 Well, you'll be stuck with either the hinted/unhinted format, which will cause some machines to butcher your font. Also, Google corretly updates and assigns the correct files automatically for you. *This library is special because it downloads the fonts from Google to your server based on User Agent, ensuring perfect compatibility.*
